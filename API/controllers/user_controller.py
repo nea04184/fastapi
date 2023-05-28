@@ -5,6 +5,7 @@ from fastapi import APIRouter, HTTPException
 
 router = APIRouter()
 
+
 @router.post("/", response_model=UserOut, status_code=201)
 async def create_user(user: UserIn):
     user_service = UserService()
