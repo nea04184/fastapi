@@ -1,32 +1,21 @@
 .
 ├── API
 │   ├── controllers
-│   │   ├── __pycache__
-│   │   │   └── user_controller.cpython-38.pyc
 │   │   └── user_controller.py
 │   └── routes
-│       ├── __pycache__
-│       │   └── user_routes.cpython-38.pyc
 │       └── user_routes.py
-├── __pycache__
-│   └── main.cpython-38.pyc
 ├── core
 ├── main.py
 ├── models
-│   ├── __pycache__
-│   │   └── user.cpython-38.pyc
 │   └── user.py
 ├── output.txt
 ├── requirements.txt
 ├── services
-│   ├── __pycache__
-│   │   └── user_service.cpython-38.pyc
+│   ├── dao
+│   │   └── user_dao.py
 │   └── user_service.py
 └── utils
-    ├── __pycache__
-    │   ├── config.cpython-38.pyc
-    │   └── hashing.cpython-38.pyc
     ├── config.py
     └── hashing.py
 
-13 directories, 16 files
+8 directories, 10 files
