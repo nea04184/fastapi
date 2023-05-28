@@ -8,7 +8,7 @@ settings = get_settings()
 class UserService:
     def __init__(self, db: AsyncIOMotorClient = None):
         self.db = db or AsyncIOMotorClient(settings.mongo_db_url)
-        self.collection = self.db["users"]
+        self.collection = self.db.get_database(settings.mongo_db_name).get_collection("users")
 
     async def create_user(self, user: UserIn):
         user_in_db = UserInDB(

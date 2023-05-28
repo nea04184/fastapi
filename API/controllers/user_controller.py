@@ -1,5 +1,6 @@
 from services.user_service import UserService
-from models.user import UserIn, UserIn, UserOut
+from models.user import UserIn, UserOut
+from datetime import datetime
 from fastapi import APIRouter, HTTPException
 
 router = APIRouter()
@@ -10,4 +11,4 @@ async def create_user(user: UserIn):
     user_id = await user_service.create_user(user)
     if not user_id:
         raise HTTPException(status_code=400, detail="User already exists")
-    return {"user_id": user.user_id, "username": user.username, "email": user.email}
+    return {"user_id": user.user_id, "username": user.username, "email": user.email, "created_at": datetime.now()}
